@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[] args) {
+    public static void block1Tasks()
+    {
         Scanner input = new Scanner(System.in);
         int userChoice;
 
@@ -65,7 +66,7 @@ public class Main
                     System.out.println("Введите высоту стены: ");
                     int height = input.nextInt();
                     System.out.println("С таким кол-вом краски можно покрасить стен:"
-                                        + howManyWall(amount, width, height));
+                            + howManyWall(amount, width, height));
                 }
                 case 7 -> {
                     System.out.println("\n");
@@ -99,9 +100,37 @@ public class Main
                     int b = input.nextInt();
                     System.out.println("Остаток от деления: " + mod(a, b));
                 }
+                default -> {
+                    System.out.println("Ошибка! Введите один из пунктов меню.");
+                }
+            }
+            if (userChoice == 0) break;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        int userChoice;
+
+        while(true)
+        {
+            System.out.println("БФИ1801 Алешин Сергей, практические задания по дисциплине ООП");
+            System.out.println("*********************");
+            System.out.println("Выберите блок задач: ");
+            System.out.println("1. 1-10");
+            System.out.println("0. Выход");
+            System.out.println("*********************");
+            userChoice = input.nextInt();
+
+            switch (userChoice)
+            {
+                case 1 -> block1Tasks();
+
                 case 0 -> {
-                    input.close();
                     return;
+                }
+                default -> {
+                    System.out.println("Ошибка! Введите один из пунктов меню.");
                 }
             }
         }
