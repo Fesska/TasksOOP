@@ -17,7 +17,8 @@ public class Main
             System.out.println("\f");
             userChoice = block1Show();
 
-            switch (userChoice) {
+            switch (userChoice)
+            {
                 case 1 -> {
                     System.out.println("\f");
                     System.out.println("Введите количество минут: ");
