@@ -1,8 +1,11 @@
 package com.company;
 
 import static com.company.Menu.block1Show;
+import static com.company.Menu.block2Show;
 import static classes.task.Block1.*;
+import static classes.task.Block2.*;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main
@@ -107,6 +110,103 @@ public class Main
             if (userChoice == 0) break;
         }
     }
+
+    public static void block2Tasks()
+    {
+        Scanner input = new Scanner(System.in);
+        int userChoice;
+
+        while (true)
+        {
+            System.out.println("\n");
+            userChoice = block2Show();
+
+            switch (userChoice)
+            {
+                case 1 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите номер дома: ");
+                    int num = Integer.parseInt(input.nextLine());
+                    System.out.println("Длину улицы (кол-во домов): ");
+                    int len = Integer.parseInt(input.nextLine());
+                    System.out.println("Противоположный дом: " + oppositeHouse(num, len));
+                }
+                case 2 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите имя и фамилию (через пробел): ");
+                    String name = input.nextLine();
+                    System.out.println("А теперь наоборот: " + nameShuffle(name));
+                }
+                case 3 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите исходную цену");
+                    int cost = Integer.parseInt(input.nextLine());
+                    System.out.println("Введите величину скидки: ");
+                    int percent = Integer.parseInt(input.nextLine());
+                    System.out.println("Цена с учетом скидки: " + discount(cost, percent));
+                }
+                case 4 -> {
+                    System.out.println("Введите элементы массива (через пробел): ");
+                    String line = input.nextLine();
+                    String [] elements = line.split(" ");
+                    int [] intArray = Arrays.stream(elements).mapToInt(Integer::parseInt).toArray();
+                    System.out.println("Результат операции: " + differenceMaxMin(intArray));
+                }
+                case 5 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите первое число: ");
+                    int a = Integer.parseInt(input.nextLine());
+                    System.out.println("Введите второе число: ");
+                    int b = Integer.parseInt(input.nextLine());
+                    System.out.println("Введите третье число: ");
+                    int c = Integer.parseInt(input.nextLine());
+                    System.out.println("Введено одинаковых чисел: " + equal(a, b, c));
+                }
+                case 6 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите любую строку ");
+                    String str = input.nextLine();
+                    System.out.println("Ваша строка в обратном порядке: " + reverse(str));
+
+                }
+                case 7 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите зарплату первого программиста: ");
+                    int first = Integer.parseInt(input.nextLine());
+                    System.out.println("Введите зарплату второго программиста: ");
+                    int second = Integer.parseInt(input.nextLine());
+                    System.out.println("Введите зарплату третьего программиста: ");
+                    int third = Integer.parseInt(input.nextLine());
+                    System.out.println("Результат: " + programmers(first, second, third));
+                }
+                case 8 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите любую строку: ");
+                    String str = input.nextLine();
+                    System.out.println("Результат: " + getXO(str));
+                }
+                case 9 -> {
+                    System.out.println("\n");
+                    System.out.println("Вы что-нибудь слышали о бомбе?: ");
+                    String str = input.nextLine();
+                    System.out.println(bomb(str));
+                }
+                case 10 -> {
+                    System.out.println("\n");
+                    System.out.println("Введите первую строку: ");
+                    String str1 = input.nextLine();
+                    System.out.println("Введите вторую строку: ");
+                    String str2 = input.nextLine();
+                    System.out.println("Результат: " + sameAscii(str1, str2));
+                }
+                default -> {
+                    System.out.println("Ошибка! Введите один из пунктов меню.");
+                }
+            }
+            if (userChoice == 0) break;
+        }
+    }
+
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
@@ -118,6 +218,7 @@ public class Main
             System.out.println("*********************");
             System.out.println("Выберите блок задач: ");
             System.out.println("1. 1-10");
+            System.out.println("2. 11-20");
             System.out.println("0. Выход");
             System.out.println("*********************");
             userChoice = input.nextInt();
@@ -125,6 +226,7 @@ public class Main
             switch (userChoice)
             {
                 case 1 -> block1Tasks();
+                case 2 -> block2Tasks();
 
                 case 0 -> {
                     return;

@@ -1,5 +1,7 @@
 package classes.task;
 
+import java.util.Locale;
+
 public class Block2
 {
     public static int oppositeHouse(int houseNum, int streetLen)
@@ -14,9 +16,9 @@ public class Block2
         return lastName + " " + firstName;
     }
 
-    public static float discount(int cost, float disc)
+    public static float discount(int cost, int disc)
     {
-        return cost * ((100 - disc)/100);
+        return (cost*(100 - disc))/100;
     }
 
     public static int differenceMaxMin(int [] array)
@@ -72,7 +74,7 @@ public class Block2
 
     public static String bomb(String reference)
     {
-        if (reference.contains("bomb")) return "ПРИГНИСЬ!";
+        if (reference.toLowerCase(Locale.ROOT).contains("bomb")) return "ПРИГНИСЬ!";
         else return "Расслабься, бомбы нет.";
     }
 
