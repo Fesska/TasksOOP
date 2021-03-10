@@ -221,7 +221,7 @@ public class Main
             System.out.println("2. 11-20");
             System.out.println("0. Выход");
             System.out.println("*********************");
-            userChoice = input.nextInt();
+            userChoice = Integer.parseInt(input.nextLine());
 
             switch (userChoice)
             {
