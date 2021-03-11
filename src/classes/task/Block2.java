@@ -16,7 +16,7 @@ public class Block2
         return lastName + " " + firstName;
     }
 
-    public static float discount(int cost, int disc)
+    public static float discount(int cost, float disc)
     {
         return (cost*(100 - disc))/100;
     }

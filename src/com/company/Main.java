@@ -142,7 +142,7 @@ public class Main
                     System.out.println("Введите исходную цену");
                     int cost = Integer.parseInt(input.nextLine());
                     System.out.println("Введите величину скидки: ");
-                    int percent = Integer.parseInt(input.nextLine());
+                    float percent = Float.parseFloat(input.nextLine());
                     System.out.println("Цена с учетом скидки: " + discount(cost, percent));
                 }
                 case 4 -> {
