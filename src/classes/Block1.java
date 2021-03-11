@@ -1,4 +1,4 @@
-package classes.task;
+package classes;
 
 public class Block1
 {

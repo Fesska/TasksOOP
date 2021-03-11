@@ -1,4 +1,4 @@
-package com.company;
+package extensions;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class Menu
         int userChoice;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Практические задачи: Блок №1");
+        System.out.println("БФИ1801 Алешин С. ПЗ: Блок №1");
         System.out.println("****************************");
         System.out.println("Доступные методы:");
         System.out.println("1. Конвертация минут в секунды");
@@ -23,6 +23,7 @@ public class Menu
         System.out.println("9. Кадры в минуту");
         System.out.println("10. Реализация оператора модуля");
         System.out.println("0. Выход");
+        System.out.println("****************************");
 
         userChoice = Integer.parseInt(input.nextLine());
         return userChoice;
@@ -33,7 +34,7 @@ public class Menu
         int userChoice;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Практические задачи: Блок №2");
+        System.out.println("БФИ1801 Алешин С. ПЗ: Блок №2");
         System.out.println("****************************");
         System.out.println("Доступные методы:");
         System.out.println("1. Номер противоположного дома");
@@ -47,6 +48,7 @@ public class Menu
         System.out.println("9. Бомба?");
         System.out.println("10. Сумма ASCII");
         System.out.println("0. Выход");
+        System.out.println("****************************");
 
         userChoice = Integer.parseInt(input.nextLine());
         return userChoice;

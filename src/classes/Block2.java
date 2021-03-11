@@ -1,4 +1,4 @@
-package classes.task;
+package classes;
 
 import java.util.Locale;
 
